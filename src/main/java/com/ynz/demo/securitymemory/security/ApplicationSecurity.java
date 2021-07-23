@@ -14,7 +14,7 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
         auth.inMemoryAuthentication().passwordEncoder(NoOpPasswordEncoder.getInstance())
                 .withUser("foo").password("foo").authorities("ADMIN")
                 .and()
-                .withUser("user").password("test").authorities("ADMIN", "USER");
+                .withUser("user").password("test").authorities("USER");
     }
 
     @Override
